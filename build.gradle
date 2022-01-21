@@ -1,0 +1,24 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}//sping Version
+
+group = 'hello' // 회사이름
+version = '0.0.1-SNAPSHOT' // 버젼
+sourceCompatibility = '11' // 자바 버젼
+
+repositories {
+	mavenCentral() // 아래의 Dependencies를 받아와야하는데
+	//mavenCentral이라는 공개된 사이트에서 받아옴
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //템플릿 엔진
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 웹스프링
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트라이브러리 (자동) JUnit5
+}
+
+test {
+	useJUnitPlatform()
+}
