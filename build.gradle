@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc' //jdbc db
+	runtimeOnly 'com.h2database:h2'//h2 db
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //템플릿 엔진
 	implementation 'org.springframework.boot:spring-boot-starter-web' // 웹스프링
 	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트라이브러리 (자동) JUnit5
